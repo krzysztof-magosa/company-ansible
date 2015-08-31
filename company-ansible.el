@@ -2,6 +2,13 @@
 
 ;; Copyright (c) 2015 Krzysztof Magosa
 
+;; Author: Krzysztof Magosa <krzysztof@magosa.pl>
+;; URL: https://github.com/krzysztof-magosa/company-ansible
+;; Package-Requires: ((emacs "24.4") (company "0.8.12"))
+;; Created: 31 August 2015
+;; Version 0.1.0
+;; Keywords: ansible
+
 ;; Permission is hereby granted, free of charge, to any person obtaining a copy
 ;; of this software and associated documentation files (the "Software"), to deal
 ;; in the Software without restriction, including without limitation the rights
@@ -19,13 +26,6 @@
 ;; LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 ;; OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 ;; SOFTWARE.
-
-;; Author: Krzysztof Magosa <krzysztof@magosa.pl>
-;; URL: https://github.com/krzysztof-magosa/company-ansible
-;; Package-Requires: ((emacs "24.4") (cl-lib "1.0") (company "0.8.12"))
-;; Created: 31 August 2015
-;; Version 0.1.0
-;; Keywords: ansible
 
 ;;; Commentary:
 ;;
