@@ -6,7 +6,7 @@
 ;; URL: https://github.com/krzysztof-magosa/company-ansible
 ;; Package-Requires: ((emacs "24.4") (company "0.8.12"))
 ;; Created: 31 August 2015
-;; Version 0.1.0
+;; Version: 0.1.0
 ;; Keywords: ansible
 
 ;; Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -47,7 +47,7 @@
                  (company-grab-word)))
 
     (candidates
-     (remove-if-not
+     (cl-remove-if-not
       (lambda (c) (string-prefix-p arg c))
       company-ansible-keywords))))
 
