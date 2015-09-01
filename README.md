@@ -7,6 +7,9 @@ using [Company Mode](https://github.com/company-mode/company-mode) for [Emacs](h
 
 ![Screenshot](/docs/screen.png "")
 
+## How to install
+The recommended way to install is via [MELPA](https://github.com/milkypostman/melpa#usage).
+
 ## Coverage
 Dictionary contains all modules, parameters and choices from:
 * [Ansible Modules - Core](https://github.com/ansible/ansible-modules-core)
