@@ -47,7 +47,7 @@
                  (company-grab-word)))
 
     (candidates
-     (remove-if-not
+     (cl-remove-if-not
       (lambda (c) (string-prefix-p arg c))
       company-ansible-keywords))))
 
