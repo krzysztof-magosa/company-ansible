@@ -10,6 +10,12 @@ using [Company Mode](https://github.com/company-mode/company-mode) for [Emacs](h
 ## How to install
 The recommended way to install is via [MELPA](https://github.com/milkypostman/melpa#usage).
 
+## How to configure Company
+You need to add `company-ansible` to backends used by company.
+```
+(add-to-list 'company-backends 'company-ansible)
+```
+
 ## Coverage
 Dictionary contains all modules, parameters and choices from:
 * [Ansible Modules - Core](https://github.com/ansible/ansible-modules-core)
