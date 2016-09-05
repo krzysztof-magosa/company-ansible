@@ -1,6 +1,6 @@
 ;;; company-ansible-keywords.el --- A company back-end for ansible
 
-;; Copyright (c) 2015 Krzysztof Magosa
+;; Copyright (c) 2015,2016 Krzysztof Magosa
 
 ;; Permission is hereby granted, free of charge, to any person obtaining a copy
 ;; of this software and associated documentation files (the "Software"), to deal
