@@ -20,3 +20,8 @@ You need to add `company-ansible` to backends used by company.
 Dictionary contains all modules, parameters and choices from:
 * [Ansible Modules - Core](https://github.com/ansible/ansible-modules-core)
 * [Ansible Modules - Extras](https://github.com/ansible/ansible-modules-extras)
+
+Supported versions of Ansible:
+* 1.9
+* 2.0
+* 2.1
