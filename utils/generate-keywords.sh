@@ -1,9 +1,18 @@
 #! /bin/bash
 
-ANSIBLE_VERSION=stable-2.1
+ANSIBLE_VERSIONS=(
+    stable-1.9
+    stable-2.0
+    stable-2.1
+)
+
+#
 
 mkdir -p ./repos/
-[ ! -d ./repos/core/ ] && git clone https://github.com/ansible/ansible-modules-core.git --branch=$ANSIBLE_VERSION ./repos/core/
-[ ! -d ./repos/extras/ ] && git clone https://github.com/ansible/ansible-modules-extras.git --branch=$ANSIBLE_VERSION ./repos/extras/
+for version in ${ANSIBLE_VERSIONS[@]} ; do
+    echo "Downloading modules for ansible $version..."
+    [ ! -d ./repos/core/$version ] && git clone https://github.com/ansible/ansible-modules-core.git --branch=$version ./repos/core/$version/
+    [ ! -d ./repos/extras/$version ] && git clone https://github.com/ansible/ansible-modules-extras.git --branch=$version ./repos/extras/$version/
+done
 
-./generator.rb './repos/*/*/*.py'
+./generator.rb './repos/*/*/*/*.py'
