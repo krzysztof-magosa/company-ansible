@@ -9,18 +9,22 @@ Dir[File.expand_path ARGV[0]].each do |file|
   documentation = content.match(/DOCUMENTATION = '''\n(.*?)\n'''/m)
   next unless documentation
 
-  yaml = YAML::load documentation[1]
-  keywords << yaml['module']
+  begin
+    yaml = YAML::load documentation[1]
+    keywords << yaml['module']
 
-  yaml['options'].to_a.each do |option_name, option|
-    keywords << option_name
+    yaml['options'].to_a.each do |option_name, option|
+      keywords << option_name
 
-    option['choices'].to_a.each do |choice|
-      choice = choice.to_s
-      next if choice.include? ' '
+      option['choices'].to_a.each do |choice|
+        choice = choice.to_s
+        next if choice.include? ' '
 
-      keywords << choice
+        keywords << choice
+      end
     end
+  rescue Psych::SyntaxError => e
+    print "An error occurred during scanning #{file}: #{e}."
   end
 end
 
