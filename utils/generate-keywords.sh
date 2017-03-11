@@ -7,13 +7,14 @@ ANSIBLE_VERSIONS=(
     stable-2.2
 )
 
-#
+
 
 mkdir -p ./repos/
 for version in ${ANSIBLE_VERSIONS[@]} ; do
     echo "Downloading modules for ansible $version..."
-    [ ! -d ./repos/core/$version ] && git clone https://github.com/ansible/ansible-modules-core.git --branch=$version ./repos/core/$version/
-    [ ! -d ./repos/extras/$version ] && git clone https://github.com/ansible/ansible-modules-extras.git --branch=$version ./repos/extras/$version/
+    if [ ! -d ./repos/$version ] ; then
+        git clone https://github.com/ansible/ansible.git --branch=$version --depth=1 --recursive ./repos/$version/
+    fi
 done
 
-./generator.rb './repos/*/*/*/*.py'
+./generator.rb './repos/*/lib/ansible/modules/**/*.py'

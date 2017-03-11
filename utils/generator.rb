@@ -6,7 +6,7 @@ require 'erb'
 keywords = []
 Dir[File.expand_path ARGV[0]].each do |file|
   content = File.read file
-  documentation = content.match(/DOCUMENTATION = '''\n(.*?)\n'''/m)
+  documentation = content.match(/DOCUMENTATION = r?'''\n(.*?)\n'''/m)
   next unless documentation
 
   begin
@@ -16,11 +16,16 @@ Dir[File.expand_path ARGV[0]].each do |file|
     yaml['options'].to_a.each do |option_name, option|
       keywords << option_name
 
-      option['choices'].to_a.each do |choice|
-        choice = choice.to_s
-        next if choice.include? ' '
+      if option['choices'] == 'BOOLEANS'
+          keywords.concat(['yes', 'no', 'true', 'false'])
+      else
+        option['choices'].to_a.each do |choice|
+          choice = choice.to_s
+          next if choice.include? ' '
+          next if choice == ''
 
-        keywords << choice
+          keywords << choice
+        end
       end
     end
   rescue Psych::SyntaxError => e
