@@ -1,12 +1,12 @@
 ;;; company-ansible.el --- A company back-end for ansible
 
-;; Copyright (c) 2015,2016 Krzysztof Magosa
+;; Copyright (c) 2015,2016,2017 Krzysztof Magosa
 
 ;; Author: Krzysztof Magosa <krzysztof@magosa.pl>
 ;; URL: https://github.com/krzysztof-magosa/company-ansible
 ;; Package-Requires: ((emacs "24.4") (company "0.8.12"))
 ;; Created: 31 August 2015
-;; Version: 0.4.0
+;; Version: 0.5.0
 ;; Keywords: ansible
 
 ;; Permission is hereby granted, free of charge, to any person obtaining a copy
