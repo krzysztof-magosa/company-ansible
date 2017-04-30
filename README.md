@@ -26,3 +26,4 @@ Supported versions of Ansible:
 * 2.0
 * 2.1
 * 2.2
+* 2.3

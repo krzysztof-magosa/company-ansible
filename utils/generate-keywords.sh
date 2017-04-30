@@ -5,6 +5,7 @@ ANSIBLE_VERSIONS=(
     stable-2.0
     stable-2.1
     stable-2.2
+    stable-2.3
 )
 
 
