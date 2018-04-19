@@ -24,7 +24,18 @@ Dir[File.expand_path ARGV[0]].each do |file|
           next if choice.include? ' '
           next if choice == ''
 
-          keywords << choice
+          # in some DOCUMENTATION sections choice might be double
+          # quoted, which does not get interpreted by Ruby's YAML, but
+          # is common in python. In the final generated list these
+          # double quotes break elisp.
+          if choice.start_with? '["' and choice.end_with? '"]'
+            choice.gsub(/\A\[|]\Z/, '').split(',').each do |choice_quote|
+              keywords << choice_quote.gsub(/\A"|"\Z/, '')
+            end
+          else
+            # normally, add directly
+            keywords << choice
+          end
         end
       end
     end
