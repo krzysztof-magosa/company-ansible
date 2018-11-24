@@ -43,7 +43,7 @@
 
   (cl-case command
     (interactive (company-begin-backend 'company-ansible))
-    (prefix (and (eq major-mode 'yaml-mode)
+    (prefix (and (bound-and-true-p ansible)
                  (company-grab-word)))
 
     (candidates
