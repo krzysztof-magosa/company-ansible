@@ -1,13 +1,9 @@
 #! /bin/bash
 
 ANSIBLE_VERSIONS=(
-    stable-1.9
-    stable-2.0
-    stable-2.1
-    stable-2.2
-    stable-2.3
-    stable-2.4
     stable-2.5
+    stable-2.6
+    stable-2.7
 )
 
 
