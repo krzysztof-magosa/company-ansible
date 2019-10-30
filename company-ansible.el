@@ -6,7 +6,7 @@
 ;; URL: https://github.com/krzysztof-magosa/company-ansible
 ;; Package-Requires: ((emacs "24.4") (company "0.8.12"))
 ;; Created: 31 August 2015
-;; Version: 0.7.1
+;; Version: 0.8.0
 ;; Keywords: ansible
 
 ;; Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,7 +43,7 @@
 
   (cl-case command
     (interactive (company-begin-backend 'company-ansible))
-    (prefix (and (eq major-mode 'yaml-mode)
+    (prefix (and (bound-and-true-p ansible)
                  (company-grab-word)))
 
     (candidates
