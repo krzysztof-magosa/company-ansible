@@ -1,6 +1,6 @@
 ;;; company-ansible.el --- A company back-end for ansible
 
-;; Copyright (c) 2015,2016,2017 Krzysztof Magosa
+;; Copyright (c) 2015-2020 Krzysztof Magosa
 
 ;; Author: Krzysztof Magosa <krzysztof@magosa.pl>
 ;; URL: https://github.com/krzysztof-magosa/company-ansible
