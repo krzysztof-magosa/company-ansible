@@ -44,7 +44,7 @@
   (cl-case command
     (interactive (company-begin-backend 'company-ansible))
     (prefix (and (bound-and-true-p ansible)
-                 (company-grab-word)))
+                 (company-grab-symbol)))
 
     (candidates
      (cl-remove-if-not
