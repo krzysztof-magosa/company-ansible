@@ -40,7 +40,7 @@ Dir[File.expand_path ARGV[0]].each do |file|
       end
     end
   rescue Psych::SyntaxError => e
-    print "An error occurred during scanning #{file}: #{e}."
+    print "An error occurred during scanning #{file}: #{e}.\n"
   end
 end
 
