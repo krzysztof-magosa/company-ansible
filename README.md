@@ -25,6 +25,9 @@ Supported versions of Ansible:
 * 2.7
 * 2.8
 * 2.9
+* 2.10 - keywords: 37 additions & 2 deletions (dir_path & edgeos_config)
+* 2.11 - No keyword changes
+* 2.12 - No keyword changes
 
 ## How to update keywords file
 ```
